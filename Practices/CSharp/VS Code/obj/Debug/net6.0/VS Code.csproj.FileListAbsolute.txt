@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\Practices\CSharp\VS Code\bin\Debug\net6.0\VS Code.exe
+C:\Users\admin\Documents\Practices\CSharp\VS Code\bin\Debug\net6.0\VS Code.deps.json
+C:\Users\admin\Documents\Practices\CSharp\VS Code\bin\Debug\net6.0\VS Code.runtimeconfig.json
+C:\Users\admin\Documents\Practices\CSharp\VS Code\bin\Debug\net6.0\VS Code.dll
+C:\Users\admin\Documents\Practices\CSharp\VS Code\bin\Debug\net6.0\VS Code.pdb
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.AssemblyInfo.cs
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.dll
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\refint\VS Code.dll
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.pdb
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\VS Code.genruntimeconfig.cache
+C:\Users\admin\Documents\Practices\CSharp\VS Code\obj\Debug\net6.0\ref\VS Code.dll
