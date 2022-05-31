@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/5/2022 5:08:40 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5831T10"
+  DTS:CreatorName="DESKTOP-5831T10\admin"
+  DTS:DTSID="{2364C363-BA1F-44CF-8E07-757DE25D99E8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{0E38CAB3-ECEF-4C73-8155-FDEFFBFD0347}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Copy File"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{25A3538D-A394-45F5-9CCA-560D55D765F2}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Copy File"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Windows\SysWOW64\xcopy.exe"
+          Arguments="C:\Execute Process Task\Source\*.*C:\Execute Process Task\Destination" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Open File"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{17BED947-F0D3-463F-A5F9-3F29FEC4C055}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Open File"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="notepad.exe"
+          Arguments="C:\Users\admin\Documents\Practices\SSIS\Execute Process Task\Source\TextSSIS.txt"
+          WorkingDirectory="C:\Users\admin\Documents\Practices\SSIS\Execute Process Task\Source\" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Un-Zip"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{3113C2FE-D73C-4541-9842-A6ECC4F6464B}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Un-Zip"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\PROGRAM FILES\7-ZIP\7Z.EXE"
+          Arguments="E &quot;C:\Users\admin\Documents\Practices\SSIS\Execute Process Task\Source\Text.ZIP&quot;"
+          WorkingDirectory="C:\Users\admin\Documents\Practices\SSIS\Execute Process Task\Source" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Zip File"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{663361E4-59EC-4FB7-9B71-BC51148F582D}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Zip File"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\PROGRAM FILES\7-ZIP\7Z.EXE"
+          Arguments="A &quot;-T7Z&quot; &quot;C:\Users\admin\Documents\Practices\SSIS\Execute Process Task\Source\Text.ZIP&quot; &quot;C:\Users\admin\Documents\Practices\SSIS\Execute Process Task\Source\TextSSIS.txt&quot; "
+          WorkingDirectory="C:\Users\admin\Documents\Practices\SSIS\Execute Process Task\Source" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Open File"
+          TopLeft="221,131" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Copy File"
+          TopLeft="507,107" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Zip File"
+          TopLeft="280,265" />
+        <NodeLayout
+          Size="112,42"
+          Id="Package\Un-Zip"
+          TopLeft="575,270" />
+        <AnnotationLayout
+          Text="Open a Text file via Notepad"
+          ParentId="Package"
+          Size="179,60"
+          Id="193c2456-8893-4143-ade4-60711d82a978"
+          TopLeft="183,76">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Constantia"
+              Size="14.25"
+              Color="#FF000000"
+              Weight="Bold">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <AnnotationLayout
+          Text="Copy a Text File to another folder path"
+          ParentId="Package"
+          Size="232,60"
+          Id="7b6c0240-64fd-41e9-a956-c145d51049bf"
+          TopLeft="463,58">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Constantia"
+              Size="14.25"
+              Color="#FF000000"
+              Weight="Bold">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <AnnotationLayout
+          Text="Zip the Files"
+          ParentId="Package"
+          Size="93,60"
+          Id="de91f87d-5dd0-42bd-ae17-fbdab87c5522"
+          TopLeft="250,211">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Constantia"
+              Size="14.25"
+              Color="#FF000000"
+              Weight="Bold">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <AnnotationLayout
+          Text="Un-Zip the Zipped File"
+          ParentId="Package"
+          Size="148,60"
+          Id="3eaa1619-a184-409f-adf4-4a65eeb550cc"
+          TopLeft="517,208">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Constantia"
+              Size="14.25"
+              Color="#FF000000"
+              Weight="Bold">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,629 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/5/2022 6:53:38 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5831T10"
+  DTS:CreatorName="DESKTOP-5831T10\admin"
+  DTS:DTSID="{A4A8BD63-CDDA-4EEF-BC70-8FE8E408EE8B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{55F7B360-4DFA-4D30-B64B-88837E4A644F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.10.30.20.Sharuk.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{ED559392-EDEA-452D-AC6D-6E81146CC435}"
+      DTS:ObjectName="10.10.30.20.Sharuk.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.10.30.20;User ID=sa;Initial Catalog=Sharuk;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnGuiGxxewU6uJ4NvyPuEEAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADtpnxPJJ8wb0Q0IerNmeXCv6ANPwrUVaRf3vHqsal0/QAAAAAOgAAAAAIAACAAAAB6pOYxAuF7DE3xbnAjvBLRBbvHVDVEKs/WxAZeeyUHuCAAAAAPW9ESiy4ss3ZdWOKM0owdnfEXSARKepjA8YCz/KR3jUAAAAAsRZHK52OGyhAC2e9N87HByKUVM0vbCp/frT0sN8AZWan5vEdx8TfzlLlSulASU2GVW5Q+QC2rWlz1gP7MWf/R</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[dataset.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{9635DBDA-0CDC-419E-8B56-9ABB4CEC6CB8}"
+      DTS:ObjectName="dataset.xml">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\admin\Documents\Practices\SSIS\XML Task\dataset.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Output_HTML.html]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{E5CD063F-A9D7-42F5-8685-B4AA79D3F98A}"
+      DTS:ObjectName="Output_HTML.html">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\admin\Documents\Practices\SSIS\XML Task\Output_HTML.html" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sample_xml.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{782B2B41-CA15-4698-8CFC-7B83F1FF29B6}"
+      DTS:ObjectName="sample_xml.xml">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\admin\Documents\Practices\SSIS\XML Task\sample_xml.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sample_XSLT.XSLT]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{CC6ED9D6-C671-489D-8651-A2F214A72998}"
+      DTS:ObjectName="sample_XSLT.XSLT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\admin\Documents\Practices\SSIS\XML Task\sample_XSLT.XSLT" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\XML Task"
+      DTS:CreationName="Microsoft.XMLTask"
+      DTS:Description="XML Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{4284B83A-908A-489A-85ED-ED9A24876304}"
+      DTS:ExecutableType="Microsoft.XMLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="XML Task"
+      DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <XMLTaskData
+          OperationType="XPATH" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\XML to Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{270F7258-3BDE-4D7E-8EE5-885C07D08A6F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="XML to Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\XML to Table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[XML_Task]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\XML to Table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.10.30.20.Sharuk.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.10.30.20.Sharuk.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedDataType="ui2"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[id]" />
+                    <inputColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="name"
+                      externalMetadataColumnId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[name]" />
+                    <inputColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[email]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="email"
+                      externalMetadataColumnId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[email]" />
+                    <inputColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[city]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="255"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="255"
+                      name="city" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\XML to Table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\XML to Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\XML to Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\XML to Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\XML to Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\XML to Table\XML Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="XML Source"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">C:\Users\admin\Documents\Practices\SSIS\XML Task\dataset.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">C:\Users\admin\Documents\Practices\SSIS\XML Task\dataset.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\XML to Table\XML Source.Outputs[record]"
+                  name="record">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">record</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].Columns[id]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[id]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[name]"
+                      length="255"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].Columns[email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[email]"
+                      length="255"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[email]"
+                      name="email"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].Columns[city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[city]"
+                      length="255"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[id]"
+                      dataType="ui2"
+                      name="id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[name]"
+                      dataType="wstr"
+                      length="255"
+                      name="name">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="255"
+                      name="email">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="255"
+                      name="city">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\XML to Table\XML Source.Outputs[record Error Output]"
+                  isErrorOut="true"
+                  name="record Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">record</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[id]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[name]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[name]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[email]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[email]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[email]"
+                      name="email" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[city]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[city]"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\XML to Table\XML Source.Outputs[record Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[id]"
+                      dataType="nText"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[name]"
+                      dataType="nText"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[email]"
+                      dataType="nText"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\XML to Table\XML Source.Outputs[record Error Output].ExternalColumns[city]"
+                      dataType="nText"
+                      name="city" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\XML to Table.Paths[record]"
+              endId="Package\XML to Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="record"
+              startId="Package\XML to Table\XML Source.Outputs[record]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\XSLT"
+      DTS:CreationName="Microsoft.XMLTask"
+      DTS:Description="XML Task"
+      DTS:DTSID="{94DC984D-C954-491F-9BC7-D55DA2C9A327}"
+      DTS:ExecutableType="Microsoft.XMLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="XSLT"
+      DTS:TaskContact="XML Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <XMLTaskData
+          OperationType="XSLT"
+          Source="sample_xml.xml"
+          SecondOperandType="FileConnection"
+          SecondOperand="sample_XSLT.XSLT"
+          SaveOperationResult="True"
+          Destination="Output_HTML.html"
+          OverwriteDestination="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="128,42"
+          Id="Package\XML Task"
+          TopLeft="443,280" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\XML to Table"
+          TopLeft="276,143" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\XSLT"
+          TopLeft="694,134" />
+        <AnnotationLayout
+          Text="XML File converted to HTML File and &#xA;Load in the Browser (XSLT)&#xA;"
+          ParentId="Package"
+          Size="280,76"
+          Id="169b1d39-85cf-491c-8d9a-dc92d32866f6"
+          TopLeft="633,65">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Constantia"
+              Size="14.25"
+              Color="#FF000000"
+              Weight="Bold">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <AnnotationLayout
+          Text="Load XML File Records &#xA;to SQL Table"
+          ParentId="Package"
+          Size="199,59"
+          Id="a732b705-dd70-4ada-bc38-07c276c7019c"
+          TopLeft="278,74">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Constantia"
+              Size="14.25"
+              Color="#FF000000"
+              Weight="Bold">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\XML to Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\XML to Table\XML Source"
+          TopLeft="337,99" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\XML to Table\OLE DB Destination"
+          TopLeft="366,278" />
+        <EdgeLayout
+          Id="Package\XML to Table.Paths[record]"
+          TopLeft="406.5,141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="48,137"
+              Start="0,0"
+              End="48,129.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,64.5"
+                    Point2="0,68.5"
+                    Point3="4,68.5" />
+                  <mssgle:LineSegment
+                    End="44,68.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44,68.5"
+                    Point2="48,68.5"
+                    Point3="48,72.5" />
+                  <mssgle:LineSegment
+                    End="48,129.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\XML to Table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
